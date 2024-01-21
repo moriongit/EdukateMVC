@@ -1,0 +1,32 @@
+﻿@using Edukate.ViewModels.InstructorVM
+@model InstructorUpdateVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container-fluid">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" asp-for="Name"></label>
+            <input class="form-control" asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Course"></label>
+            <input class="form-control" asp-for="Course">
+            <span asp-validation-for="Course"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="ImgPath"></label>
+            <input class="form-control" asp-for="ImgPath">
+            <span asp-validation-for="ImgPath"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
